@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">mon</div>
+        <div class="child">tue</div>
+        <div class="child">wed</div>
+        <div class="child">thus</div>
+        <div class="child">fri</div>
+    </div>
+
+    <script>
+        const parent=document.querySelector('.parent');
+        console.log(parent.children); // HTMLCollection(5) [div.child, div.child, div.child, div.child, div.child]
+        console.log(parent.children[0].innerHTML); // mon
+
+        const day=document.querySelector('.child');
+        console.log(day); //returns as
+                                /*
+                                {
+                                "0": {},
+                                "1": {},
+                                "2": {},
+                                "3": {}
+                                */
+        console.log(day.parentElement);//returns name of its parent element
+        console.log(day.nextElementSibling); //returns the next element after monday i.i tuesday    
+    </script>
+</body>
+</html>

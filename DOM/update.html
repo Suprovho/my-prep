@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const div=document.createElement("div");
+        div.className="hello";
+        div.id="world";
+        div.setAttribute("title","generatedTitle");//just added the basic title with value generatedTitle
+        div.style.backgroundColor="orange";
+        div.innerText="welcome to js"
+           //So far in the above code we can observe that only the memory is been allocated but its not yet passed to the webPage, so for that we need to append it via append to document
+        document.body.appendChild(div);
+    </script>
+</body>
+</html>
