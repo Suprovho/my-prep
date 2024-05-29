@@ -1,0 +1,1 @@
+// if we use spread operator for concat two objects and if both objects have any same properties and value then the latest value will override means if 2 objects then 2nd one value.
