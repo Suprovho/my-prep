@@ -150,3 +150,7 @@ const book=[
                .map((num)=>num+1)//  11, 21, 31, 41, 51,61, 71, 81, 91
                .filter((num)=>num>=61)// [ 61, 71, 81, 91 ]
    console.log(map3);
+
+
+   // diff between map and for each is map return a new array where as for each does`nt it modify the original array.
+   // second is in map we can chain method like filter reduce etc but in for each we cant

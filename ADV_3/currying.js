@@ -24,3 +24,15 @@ let multiply=function (x) {
 let MultiplyByTwo = multiply(2); // same as above
 
 MultiplyByTwo(3); // 6
+
+// infinite currying
+
+
+function add() {
+  return function(b){
+    if (b) return add(a+b);
+    return a;
+  }
+}
+
+console.log(add(4)(5)(7)(9)());

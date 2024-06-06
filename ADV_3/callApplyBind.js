@@ -34,3 +34,20 @@ console.log(printName);
 printName();
 
 // it directly doesn't invoke the function but gives you the copy of the exactly same method which can be invoked later.
+
+//* implicit & explicit binding
+
+let obj={
+    names:"suprovho",
+    display:function(){
+        console.log(this.names);
+    },
+};
+
+let obj1={
+    names:"john"
+};
+
+obj.display() // implicit 
+
+obj.display.call(obj1) // john
