@@ -1,5 +1,5 @@
 
-// map
+//* map
 
 Array.prototype.Mymap=function(cb){
     let temp=[]
@@ -18,7 +18,7 @@ const multiply=nums.Mymap((num)=>{
 
 console.log(multiply);
 
-// filter 
+//* filter 
 
 Array.prototype.myFillter=function(cb){
     let temp=[];
