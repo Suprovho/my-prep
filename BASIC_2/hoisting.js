@@ -23,9 +23,11 @@ function getName(params) {
 
 // incase this type of case ->
 
-let getName=()=>{
+let getName2=()=>{
     console.log("namaste js");
 } 
+
+getName2();
 
 //* if we call the func like before it will throw an error as function is not defined because it will behave as normal variable not as function before the code is run and it will be set as undefined.. like other variable so when we are invoking before it trows an error
 
