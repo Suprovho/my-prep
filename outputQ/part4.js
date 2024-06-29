@@ -25,3 +25,14 @@ for (let i = 0; i < 10; i++) {
 for (var i = 0; i < 10; i++) {
   setTimeout(() => console.log(b[i]), 1000);
 }
+
+
+function sum(num1,num2) {
+"use strict";
+  num1=100;
+  num2=200;
+  return arguments[0]+arguments[1];
+}
+
+sum(10,20) // output - 300 because js override the value;
+// we can prevent it using use strict

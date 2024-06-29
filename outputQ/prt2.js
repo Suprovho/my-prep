@@ -56,4 +56,6 @@ let hero = {
 
     //Reason - The first output is undefined since when the function is invoked, it is invoked referencing the global object:
 
+
+
  

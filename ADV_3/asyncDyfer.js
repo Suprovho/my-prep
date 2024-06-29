@@ -15,3 +15,4 @@
 //* when to use what ?
 
 // if one script tag is depended on other then we should use defer otherwise async basically in async the order may not be same so when we have to follow certain order we use defer. 
+
