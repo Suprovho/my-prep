@@ -60,7 +60,7 @@ const p3 = new Promise((resolve, reject) => {
 
 // Promise.allSettled([p1, p2, p3])
 // .then((res) => {
-//   console.log(res);
+//   console.log(res); // return array of objects.
 // })
 // .catch((err) => {
 //     console.error(err);
@@ -70,15 +70,17 @@ const p3 = new Promise((resolve, reject) => {
 
 // Promise.race([p1, p2, p3])
 // .then((res) => {
-//   console.log(res);
+//   console.log(res); // first settled promise.
 // })
 // .catch((err) => {
 //     console.error(err);
 // });
 
+//!-------------------------------->
+
 Promise.any([p1, p2, p3])
 .then((res) => {
-  console.log(res);
+  console.log(res);  // first settled success promise
 })
 .catch((err) => {
     console.error(err);
