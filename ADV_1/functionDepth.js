@@ -13,6 +13,8 @@ let b = function(){
     console.log("b is called");
 };
 
+
+
 //* function used as a values is called function expression.
 //* diff between these two is hoisting .. as learned in earlier section that it is treated as normal variable. 
 
@@ -43,7 +45,7 @@ xyz(); // reference error
 //* the ability to use function as a value and pass as an argument or return  is called first class function.
 
 
-const a = function (params) {
+const a = function () {
     return ()=>{
         console.log("hello");
     }

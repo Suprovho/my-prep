@@ -10,7 +10,19 @@ function x() {
   console.log("suprovho");
 }
 
+function xz(params) {
+  for (let i = 0; i <=6 ; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, i*100);
+    
+  }
+  console.log("sup");
+}
+
 // x();
+
+xz();
 
 //OUTPUT
 /**

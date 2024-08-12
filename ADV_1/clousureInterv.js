@@ -10,7 +10,7 @@ function outest() {
     }
     return outer;  
 }
-
+ 
 let a=20;
 
 outer()(); // this extra parenthesis is like calling the outer func and  inner function in same line 

@@ -3,7 +3,9 @@
 
 //* Before promise we used to depend on callback functions which would result in 1.) Callback Hell (Pyramid of doom) | 2.) Inversion of control
 
-// 2. Inversion of control is overcome by using promise.
+// inversion of control means ur giving control of our func to another func..
+
+// 2. Inversion of control is overcome by using promise. 
 
 //*  2.1) A promise is an object that represents eventual completion/failure of an asynchronous operation.
 //   2.2) A promise has 3 states: pending | fulfilled | rejected.
@@ -24,6 +26,7 @@ createOrder(cart)
  .then((orderID)=>proceedToPayment(orderID))
  .then((paymentInfo)=>showOrderSummary(paymentInfo))
  .then((paymentInfo)=>updateWalletBalance(paymentInfo))
+
 
 //!NOTE: 
 //* we attach the callback function with promise object not pass it   

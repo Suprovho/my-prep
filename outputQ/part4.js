@@ -36,3 +36,6 @@ function sum(num1,num2) {
 
 sum(10,20) // output - 300 because js override the value;
 // we can prevent it using use strict
+
+
+Object.freeze() // it prevent modification of existing properties and values and prevent addition of new properties. act as a const.
