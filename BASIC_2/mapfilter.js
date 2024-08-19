@@ -1,6 +1,11 @@
 
+
+//* WHY ARE WE USING THIS WE CAN ALSO USE FOR EACH OR OTHER ADV LOOPS FOR SAME TASK BUT THE MAJOR DRAW BACK IS THAT IT DOESN'T RETURN THE VALUES .. AS MAP FILTER DOES.
+
+
 //Filter method starts here
 //the use case of filter is to check the cobndition
+
 const arr2=[1,2,3,4,45,];
 const ans=arr2.filter((item)=>item>3) //returns [ 4, 45 ]
 console.log(ans);

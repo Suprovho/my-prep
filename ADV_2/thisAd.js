@@ -1,7 +1,7 @@
 
 //! THIS keyword.
 
-"use strict";
+//* "use strict";
 
 // this in global space 
 
@@ -10,8 +10,17 @@ console.log(this); // this keyword in global space will always have global objec
 //* inside function scope
 
 function x() {
+    
     console.log(this);
 }
+
+function x2() {
+    let username="suprovho"
+    console.log(this.username);
+} 
+
+// we can not use this like avobe example in function.. only in object..
+
 x();
 
 //* this keyword run different in strict mode and in non strict mode.
@@ -28,6 +37,7 @@ const obj={
       console.log(this); 
     }
 }
+
 
 obj.x(); // output will be the object  and if we do this.a then it will be 10 in line 28.
 
@@ -54,6 +64,16 @@ obj2.printName.call(obj3);
 //* this inside arrow function.
 
 // arrow function don't have this binding.
+
+//!EXTRA ->
+
+// if we have to do object operations on arrow functions we use () instead of {}
+
+const name=()=>({name:"suprovho",age:"21"}) // diff btw arrow dun and normal.
+
+console.log(name());
+
+
 const obj4={
     name: "suprovho",
     printName: function() { 

@@ -5,8 +5,8 @@ const cart = ["shoes", "pants", "shirts", "kurta"];
 createOrder(cart) // promise is created
   .then((orderID) => {
     // whatever we resolve while creating promise it get over here.
-    console.log(orderID);
-    return orderID; // a call back fun will be attached to the promise obj..
+    console.log(orderID);  
+    return orderID;  // we need to return the value as it wil be used by next .then()
   })
   .then((orderID) => {
     return proceedToPayment(orderID);
