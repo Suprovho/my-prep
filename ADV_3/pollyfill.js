@@ -21,12 +21,23 @@ printMyName("WB");
 
 Function.prototype.myBind=function(...args){
    let obj=this // this point to the printname function.
-   params=args.slice(1); // separate the obj from args.
+   params=args.slice(1); // separate the ele from args which is in array form.
    return function(...args2){
       obj.apply(args[0],[...params,...args2]);
    }
 
 }
 
+Function.prototype.myBind2=function (...args) {
+    let obj=this
+    params=args.slice(1); 
+    return function(...args2) {
+        obj.apply(args[0],[...params,...args2]);
+    }
+}
+
 let printMyName2=printname.myBind(name,"siliguri");
 printMyName2("WB");
+
+let printMyName3=printMyName.myBind2(name,"kro");
+printMyName3("KR")

@@ -26,7 +26,6 @@ object2.__proto__= object;
 console.log(object2.city);
 
 
-
 Function.prototype.myBind=function() { //  setting myBind to Function.prototype will gave access to all my function to access myBind func   
     console.log("hello");
 }

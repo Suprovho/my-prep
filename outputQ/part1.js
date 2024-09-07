@@ -12,13 +12,14 @@ function f1() {
   var x = 2;
 }
 
-f1(); // 2,5  y will run because js wait for none so y get hoisted .
+f1(); // 2,5  y will run because js wait for none so y get hoisted.
 
 function func2() {
   for (var i = 0; i < 3; i++) {
     setTimeout(() => console.log(i), 2000); // because var is not a block scope and it get incremented first
   }
 }
+
 func2();
 
 (function () {
@@ -28,7 +29,9 @@ func2();
   console.log(4);
 })();
 
+
 // 2
 // 4
 // 3
 // 1 //* After two seconds
+
