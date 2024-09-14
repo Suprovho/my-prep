@@ -37,7 +37,7 @@ let c = function xyz(){
 xyz(); // reference error
 
 
-//* parameters are te local variables available to fun and arguments are the values passed.. 
+//* parameters are the local variables available to fun and arguments are the values passed.. 
 
 //! first class function aka first class citizens   ->
 

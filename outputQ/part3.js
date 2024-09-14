@@ -5,6 +5,7 @@ const a = function () {
       console.log(this);
     },
   };
+
   const c = {
     func2: () => {
       console.log(this);
@@ -13,7 +14,7 @@ const a = function () {
   b.func1();
   c.func2();
 };
-a();
+// a();
 
 //Since we are using the arrow function inside func2, this keyword refers to the global object.
 

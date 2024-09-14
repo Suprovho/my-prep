@@ -6,7 +6,7 @@ console.log(getName); // it will print the function code
 
 var x=7;
 
-function getName(params) {
+function getName() {
     console.log("namaste js");
 } 
 

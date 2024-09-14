@@ -41,4 +41,4 @@ console.log(radius.calculate(area));
 
 //* Callback passed into another function as an argument and another function passed into the callback function as nested callback. So code go horizontally inside vertically. So the callback code as unmaintainable ans unreadable. It's also known as pyramid doom
 
-//* Inversion of control - The callback function is passing to another function as an argument. So our callback function blindly trust the other function. Whether this will execute or not.  ur giving control of ur function.
+//* 

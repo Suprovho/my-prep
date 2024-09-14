@@ -7,9 +7,9 @@ console.log(x[y]);
 
 function runFunc() {
   console.log("1" + 1);
-  console.log("A" - 1);
+  console.log("A" - 1); //nan
   console.log(2 + "-2" + "2");
-  console.log("Hello" - "World" + 78);
+  console.log("Hello" - "World" + 78); //nan
   console.log("Hello" + "78");
 }
 runFunc();
@@ -49,12 +49,13 @@ let hero = {
     return this.powerLevel;
     }
     }
+
     let getPower = hero.getPower;
     let hero2 = {powerLevel:42};
     console.log(getPower()); //undefined
     console.log(getPower.apply(hero2));//42
 
-    //Reason - The first output is undefined since when the function is invoked, it is invoked referencing the global object:
+    //Reason - The first output is undefined since when the function is not  invoked, it is invoked referencing the global object:
 
 
 

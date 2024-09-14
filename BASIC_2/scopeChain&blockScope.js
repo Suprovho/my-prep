@@ -28,27 +28,49 @@ a();
  *
  *! Refer the pic of scope chain  
  */
-
+ 
 
 //! LET and CONST ->
 
-let a=10;
+let g=10;
 const b=10;
  
-//* -> let and const are hoisted. we cant use them before initialization is result of "temporal dead zone".
-//* -> js use diff memory than global execution context to store let and cost. which is reason behind "temporal dead zone"
-//* -> level of strictness ... var<<let<<const.
-//* -> var //no temporal dead zone, can redeclare and re-initialize, stored in GES
-//*     let //use TDZ, can't re-declare, can't re-initialize  stored in separate memory 
-//*    const //use TDZ, can't re-declare, can't re-initialize, stored in separate memory and it should be initialized and declared in same line.. else it will show syntax error.
+//* ->  let and const are hoisted. we cant use them before initialization is result of "temporal dead zone".
+//* ->  js use diff memory than global execution context to store let and cost. which is reason behind "temporal dead zone"
+//* ->  level of strictness ... var<<let<<const.
+//* ->  var     // no temporal dead zone, can redeclare and re-initialize, stored in GES
+//*     let    // use TDZ, can't re-declare, can't re-initialize  stored in separate memory 
+//*     const // use TDZ, can't re-declare, can't re-initialize, stored in separate memory and it should be initialized and declared in same line.. else it will show syntax error.
 
-//* -> syntax error is similar to compile error. while type and reference error falls under run time error.
-//* -> syntax error ... violation of JS syntax
+//* ->  syntax error is similar to compile error. while type and reference error falls under run time error.
+//* ->  syntax error ... violation of JS syntax
 //*     type error ...  while trying to re-initialize const variable
 //*     reference error ... while trying to access variable which is not there in global memory.
 
+const f=20;
+
+// f=21 // error
+
+console.log(f)
+
+
+//  const f=20; //Invalid
+
+//  const a; syntax error 
+
+// let c;
+
+// c=20 // error
+
+
+
+// let c=20;  // error
+
+
 //! NOTE:
+
 // However, you can change the properties of an object that is assigned to a const or let variable. For example, the following code is valid:
+
 const MY_OBJECT = {
     name: 'John Doe',
     age: 30
@@ -56,12 +78,8 @@ const MY_OBJECT = {
 
 MY_OBJECT.name = 'Jane Doe'; // This is valid.
 
-//*This is because the const and let keyword only prevents you from reassigning the variable itself, not from changing the values of its properties.
+//* This is because the const and let keyword only prevents you from reassigning the variable itself, not from changing the values of its properties.
 
-//easy ex->
-
-let x=7;
-x=30;
 
 
 //!BLOCK SCOPE && shadowing in let and const ->
@@ -73,7 +91,7 @@ x=30;
 // Block scope :-  The variables and function present within the scope of a block section. And block follows the lexical scope chain pattern while accessing the variable.
 // Shadowing :-  Providing same name to the variable as of those variable which are present in outer scope.
 
-const a=10; //* it store like normal const script ... tdz 
+const x=10; //* it store like normal const script ... tdz 
 {
     const a=20;
     console.log(a); //*20 it is stored in block scope 
@@ -82,7 +100,7 @@ const a=10; //* it store like normal const script ... tdz
         console.log(a); //*30 same here but diff 
     }
 }
-console.log(a); //*10
+console.log(x); //*10
 
 //!incase of var
 
@@ -96,8 +114,8 @@ var a = 100;
  console.log(c); //30
 }
  console.log(a); // 10
- console.log(b); // error 
- console.log(c); // error 
+//!  console.log(b); // error 
+//!  console.log(c); // error 
 
 //* So in block  var a = 10; it update the value of var a in global scope as it is present in global scope not in block scope. 
 

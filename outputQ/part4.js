@@ -34,8 +34,15 @@ function sum(num1,num2) {
   return arguments[0]+arguments[1];
 }
 
+function sum2(num1,num2){
+  num1=100;
+  num2=200;
+  return arguments[0]+arguments[1];
+}
+
 sum(10,20) // output - 300 because js override the value;
 // we can prevent it using use strict
 
+console.log(sum2(10,20));
 
 Object.freeze() // it prevent modification of existing properties and values and prevent addition of new properties. act as a const.
