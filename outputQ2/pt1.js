@@ -61,3 +61,27 @@ console.log(foo); // error because foo is in function scope and it get deleted a
 console.log(a);
 
 a=30;
+
+function a(params) {
+    return 2;
+}
+
+function b(params) {
+    return 4;
+}
+
+let a = (a(),b()) // 4 because first in a 2 will be there then it will get updated by 4
+
+console.log(a);
+
+
+const arr = ['one', 'two', 'three'];
+const str = 'Hello';
+
+const res = arr.includes('on') 
+const anotherVar=arr.includes("oneTwo")
+const newVar = str.includes('11')
+
+console.log(res);
+console.log(anotherVar);
+console.log(newVar);
