@@ -5,10 +5,21 @@ console.log([..."John Resig"]);
 
 var x = 20
    function foo(){
-    console.log(x)
+    console.log(x) // as x is not defined in function scope.
     var x = 10
    }
-foo(); // undefined.
+foo(); // undefined. 
+
+
+console.log(typeof NaN); // number.
+
+
+// function foo3(a,...b,c){
+//   console.log(a,b,c);
+// }
+
+foo3(1,2,3,4,5) // rest operator should be in last.
+
 
 function f1() {
   setTimeout(() => {
