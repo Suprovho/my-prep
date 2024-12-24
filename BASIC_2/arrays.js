@@ -32,7 +32,7 @@ console.log("for include", arr2.includes("a")); //True
 console.log(arr2.indexOf("d")); // since its contains on the zero element in an array
 console.log("for indxOf", arr2.indexOf("l")); // Returns -1 if it doesn't contains the element on a given array
 
-//slice
+//splice
 console.log(arr2.splice(1, 2));
 console.log("for splice", arr2); //The splice is tricky to understand since its actually made a change in the original array elements only
 

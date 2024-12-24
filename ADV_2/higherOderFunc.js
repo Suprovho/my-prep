@@ -33,7 +33,7 @@ Array.prototype.calculate = function (logic) {  //logic here is  callback functi
     return output;
 }
 
-console.log(radius.calculate(area));
+// console.log(radius.calculate(area));
 
 // NOTE: Follow DRY(Don't Repeat Yourself) principle while coding.
 
@@ -42,3 +42,21 @@ console.log(radius.calculate(area));
 //* Callback passed into another function as an argument and another function passed into the callback function as nested callback. So code go horizontally inside vertically. So the callback code as unmaintainable ans unreadable. It's also known as pyramid doom
 
 //* 
+
+
+const radius2=[2,3,4,6,10];
+
+
+const area2=function (radius) {
+    return Math.floor(Math.PI*radius*radius);
+}
+
+Array.prototype.calculate2=function (cb) {
+    const output=[];
+    for (let i = 0; i < this.length; i++) {
+        output.push(cb(this[i]));
+    }
+    return output;
+}
+
+console.log(radius.calculate2(area2));

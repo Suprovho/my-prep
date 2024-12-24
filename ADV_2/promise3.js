@@ -1,4 +1,3 @@
-
 // refer the images ->
 
 //! promise.all() ->
@@ -34,8 +33,8 @@
 //! --------------------------------> CODE ->
 
 const p1 = new Promise((resolve, reject) => {
-//   setTimeout(() => resolve("p1 success"), 2000);
-  setTimeout(()=>reject("p1 fail"),2000);
+  //   setTimeout(() => resolve("p1 success"), 2000);
+  setTimeout(() => reject("p1 fail"), 2000);
 });
 
 const p2 = new Promise((resolve, reject) => {
@@ -45,7 +44,7 @@ const p2 = new Promise((resolve, reject) => {
 
 const p3 = new Promise((resolve, reject) => {
   setTimeout(() => resolve("p3 success"), 5000);
-//   setTimeout(()=>reject("p3 fail"),5000);
+  //   setTimeout(()=>reject("p3 fail"),5000);
 });
 
 // Promise.all([p1, p2, p3])
@@ -79,13 +78,10 @@ const p3 = new Promise((resolve, reject) => {
 //!-------------------------------->
 
 Promise.any([p1, p2, p3])
-.then((res) => {
-  console.log(res);  // first settled success promise
-})
-.catch((err) => {
+  .then((res) => {
+    console.log(res); // first settled success promise
+  })
+  .catch((err) => {
     console.error(err);
     console.log(err.errors);
-});
-
-
-
+  });
