@@ -3,6 +3,8 @@
 // map method is used when we want transformation of whole array.
 // filter is used when we want to filter the array to obtain required value.
 
+//acc - prev , curr - present.
+
 const user = [
   { firstname: "Alice", lastname: "Smith", age: 28 },
   { firstname: "Bob", lastname: "Johnson", age: 35 },
@@ -23,6 +25,16 @@ const output = user.reduce(function(acc,curr){
     return acc;
 
 },{});
+
+const output4=user.reduce(function(acc,curr) {
+    if (acc[curr.age]) {
+        acc[curr.age]=++acc[curr.age]
+    }
+    else{
+        acc[curr.age]=1; 
+    }
+    return acc;
+},{})
 
 console.log(output);
 

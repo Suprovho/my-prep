@@ -71,4 +71,11 @@ function add2(a) {
   }
 }
 
+function add3(a) {
+  return function(b) {
+    if (b) return add3(a+b)
+    return a;
+  }
+}
+
 console.log(add2(4)(5)(7)(9)());

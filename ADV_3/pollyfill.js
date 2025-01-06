@@ -12,6 +12,10 @@ let name={
     lastName:"sd"
 }
 
+let printname4=function (hometown,state) {
+    console.log(this.firstName+""+this.lastName+""+hometown+state);
+}
+
 let printname=function (hometown,state) {
     console.log(this.firstName+" "+this.lastName+" , "+hometown+" , "+state);
 }
@@ -34,6 +38,15 @@ Function.prototype.myBind2=function (...args) {
     return function(...args2) {
         obj.apply(args[0],[...params,...args2]);
     }
+}
+
+
+Function.prototype.mybind3=function (...args) {
+     let object=this
+     params=args.slice(1);
+     return function (...args2) {
+        object.apply(args[0],[...params,...args2]);
+     }
 }
 
 let printMyName2=printname.myBind(name,"siliguri");

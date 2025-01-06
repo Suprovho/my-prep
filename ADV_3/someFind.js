@@ -17,4 +17,4 @@ console.log(foundUser); // { id: 2 }
 
 //* some allows you to use a callback function, giving you more control over what you are checking for, including complex conditions. used for objects.
 
-//*includes check for primitive datatype strings or number in an array or strings.
+//*includes() check for primitive datatype strings or number in an array or strings.
