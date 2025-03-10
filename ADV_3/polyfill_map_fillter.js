@@ -62,3 +62,10 @@ const moreThanTwo = nums2.myFillter((num) => {
 });
 
 console.log(moreThanTwo);
+
+// for each
+Array.prototype.myForeach=function(cb) {
+  for (let i = 0; i < this.length; i++) {
+       cb(this[i],this,i);
+  }
+}

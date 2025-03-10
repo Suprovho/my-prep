@@ -35,6 +35,6 @@ k();
 
 //!use case ->
 
-// set time out , currying,memoize,etc...
+// set time out ,currying,memoize,etc...
 
 

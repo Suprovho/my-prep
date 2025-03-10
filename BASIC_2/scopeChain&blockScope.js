@@ -38,8 +38,8 @@ const b=10;
 //* ->  let and const are hoisted. we cant use them before initialization is result of "temporal dead zone".
 //* ->  js use diff memory than global execution context to store let and cost. which is reason behind "temporal dead zone"
 //* ->  level of strictness ... var<<let<<const.
-//* ->  var     // no temporal dead zone, can redeclare and re-initialize, stored in GES
-//*     let    // use TDZ, can't re-declare, can't re-initialize  stored in separate memory 
+//* ->  var     // no temporal dead zone, can redeclare and re-initialize, stored in GEC
+//*     let    // use TDZ, can't re-declare   stored in separate memory 
 //*     const // use TDZ, can't re-declare, can't re-initialize, stored in separate memory and it should be initialized and declared in same line.. else it will show syntax error.
 
 //* ->  syntax error is similar to compile error. while type and reference error falls under run time error.
